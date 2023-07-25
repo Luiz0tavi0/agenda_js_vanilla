@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agenda</title>
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <script type="module" src="crudAgenda.js"></script>
+    <script src="https://kit.fontawesome.com/7ee9f71baa.js" crossorigin="anonymous"></script>
+    
+  </head>
+  <body>
+    <main id="main" class="center">
+      <h1>Agenda de Contatos</h1>
+      <form id="formContato">
+        <fieldset class="form-control">
+          <label for="nomeContato">Nome:</label>
+          <div class="input-container">
+            <input
+              id="nomeContato"
+              type="text"
+              name="name"
+              value=""
+              placeholder="Nome do contato"
+              autocomplete="name"
+            />
+            <small>Campo inválido</small>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-control">
+          <label for="foneContato">Telefone:</label>
+          <div class="input-container">
+            <input
+              type="number"
+              name="fone"
+              id="foneContato"
+              placeholder="Telefone do contato"
+              autocomplete="tel"
+            />
+            <small>Campo inválido</small>
+          </div>
+        </fieldset>
+        <fieldset class="form-control">
+          <label for="enderecoContato">Endereço:</label>
+          <div class="input-container">
+            <input
+              type="text"
+              name="endereco"
+              id="enderecoContato"
+              placeholder="Endereço do contato"
+              autocomplete="address-level1"
+            />
+            <small>Campo inválido</small>
+          </div>
+        </fieldset>
+        <div class="center">
+          <button type="button" id="btn_cancel" class="btn">Cancelar</button>
+          <button type="submit" id="btn_ok" class="btn" disabled>Salvar</button>
+        </div>
+      </form>
+
+      <!-- Tabela de contatos -->
+      <section id="contact-list">
+        <!-- Contatos serão adicionados aqui -->
+        <div class="table">
+          <div class="table-row header-row">
+            <div class="table-cell min-cell">ID</div>
+            <div class="table-cell">Nome</div>
+            <div class="table-cell medium-cell">Fone</div>
+            <div class="table-cell large-cell">Endereço</div>
+            <div class="table-cell min-cell"><i class="fa-duotone fa-gears"></i></div>
+          </div>
+          </div>
+      </section>
+    </main>
+    <script type="module" src="./index.js" defer></script>
+  </body>
+</html>

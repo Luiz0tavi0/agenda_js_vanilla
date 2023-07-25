@@ -1,0 +1,18 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  border: none;
+  /* border: none; */
+}
+/* body {
+  background: linear-gradient(
+    144deg,
+    rgba(34, 193, 195, 0.8) 0%,
+    rgba(253, 187, 45, 0.562) 80%,
+    rgba(77, 61, 29, 0.8) 100%
+  ); 
+}*/
+body {
+  background: linear-gradient(172deg, rgba(101,216,217,0.7567401960784313) 11%, rgba(110,49,207,0.43461134453781514) 29%, rgba(85,113,207,1) 64%, rgba(49,207,160,0.5830707282913166) 78%);
+}

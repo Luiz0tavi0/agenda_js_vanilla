@@ -1,0 +1,231 @@
+#main {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  justify-content: start;
+  gap: 1vh;
+  color: #575757;
+}
+
+form {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  margin-bottom: 10px;
+  min-width: 30%;
+  align-items: center;
+
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+
+  background: rgba(255, 255, 255, 0.09);
+  border-radius: 5px;
+  backdrop-filter: blur(100px);
+}
+
+input {
+  display: flex;
+  min-height: 40%;
+  width: 100%;
+  margin: 1px 2px 2px 5px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+  /* text-align: left;  */
+  /* vertical-align: middle;  */
+}
+input:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+input:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.form-control {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+}
+.input-container small {
+  /* position: relative; */
+  /* top: -3px;   */
+  visibility: hidden;
+  /* text-align: center; */
+  font-weight: 700;
+  color: #f12a07;
+}
+
+.form-control.error-validation input {
+  border: #f12a07 solid 1px;
+  box-shadow: inset 1px 1px 4px #f12a07;
+}
+.form-control.error-validation small {
+  visibility: visible;
+}
+
+.input-container {
+  width: 100%;
+  display: inline;
+}
+
+.center {
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+button.btn {
+  border: 1px solid;
+  margin: 15px 15px;
+  width: 90px;
+  height: 30px;
+  font-size: 16px;
+  padding: 5px 5px 5px 5px;
+  background-color: transparent;
+  transition: border-color 0.3s ease;
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #e0e0e0;
+  color: #888888;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+#btn_ok {
+  color: rgb(134, 182, 134);
+  border-color: rgb(134, 182, 134);
+  /* transition: box-shadow 0.3s ease; */
+}
+#btn_ok:hover {
+  box-shadow: inset 0px 0px 20px 6px rgb(134, 182, 134);
+  color: #ffffff;
+  /* font-weight: bolder; */
+  border-color: #ffffff;
+}
+#btn_cancel {
+  position: relative;
+  color: rgb(230, 11, 11);
+  border-color: rgb(230, 11, 11);
+  /* transition: box-shadow 0.3s ease; */
+}
+
+#btn_cancel:hover {
+  box-shadow: inset 0px 0px 20px #ff0000;
+  color: #fdfdfd;
+  /* font-weight: bolder; */
+  border-color: #ffffff;
+}
+#btn_cancel:active {
+  box-shadow: 0px 0px 18px 2px #ff4b4be5;
+  color: #ff0000;
+  /* font-weight: normal; */
+  border-color: #ffffff;
+}
+#btn_ok:active {
+  box-shadow: 0px 0px 18px 2px rgb(134, 182, 134);
+  color: rgb(134, 182, 134);
+  /* font-weight: normal; */
+  border-color: #ffffff;
+}
+
+/* Tabela de contatos */
+
+section#contact-list {
+  margin-top: 1%;
+  width: 75%;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.table-row {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0px;
+}
+.table-row:hover {
+  background-color: hsla(0, 0%, 10%, 0.12);
+}
+
+.header-row {
+  font-weight: bold;
+}
+.table-cell {
+  flex: 1;
+  padding: 0px 5px;
+}
+.min-cell {
+  flex: 0.5;
+}
+.medium-cell {
+  flex: 2;
+}
+.large-cell {
+  flex: 3;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.delete-icon {
+  /* position: absolute; */
+  height: 100%;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  visibility: hidden;
+  cursor: pointer;
+  padding: 5px;
+  margin: -5px;
+  cursor: pointer;
+  color: red;
+}
+
+.table-row:hover .delete-icon {
+  /* visibility: visible; */
+  /* margin-right: 5px; */
+}
+
+.edit-icon {
+  /* position: absolute; */
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  visibility: hidden;
+  cursor: pointer;
+  padding: 5px;
+  margin: -5px;
+  cursor: pointer;
+  color: hsl(155, 29%, 65%);
+}
+
+.table-row:hover .contact-edit svg {
+  visibility: visible;
+}
+.contact-edit {
+  visibility: hidden;
+}
