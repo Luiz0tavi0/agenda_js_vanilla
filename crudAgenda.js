@@ -12,23 +12,22 @@ class LocalStorageCRUD {
   }
 
   getById(id) {
-    return this.data.find(contato => contato.id===id);
+    return this.data.find((contato) => contato.id === id);
   }
   /**
    * @private
    */
   __updateIndex() {
-    
     let lastIndex = parseInt(localStorage.getItem("lastIndex"));
     if (isNaN(lastIndex))
-      lastIndex = Math.max(...this.data.map(item=>item.id));
-    
+      lastIndex = Math.max(...this.data.map((item) => item.id));
+
     lastIndex += 1;
     localStorage.setItem(this.nameOfIndex, lastIndex.toString());
     return lastIndex;
   }
 
-  create(contato) {    
+  create(contato) {
     contato["id"] = this.__updateIndex();
     this.data.push(contato);
     this.saveData();

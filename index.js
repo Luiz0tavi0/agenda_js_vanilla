@@ -84,6 +84,7 @@ form.allInputs.forEach((inputTextField) => {
 form.formularioContato.addEventListener("submit", (e) => {
   e.preventDefault();
   // Checa se é um novo registro ou atualização.
+  
   if (form.mode === "new") addNovoContato();
   else atualizaContato();
 });
